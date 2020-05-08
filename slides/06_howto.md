@@ -33,7 +33,7 @@ reveal-md presentation.md --static docs
 
 ----
 
-### Create single MD file
+### I use multiple MD files
 
 <p style="color:GoldenRod; font-size:0.75em;">For simplicity I create an md for each slide and concat.</p> 
 
