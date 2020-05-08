@@ -1,3 +1,296 @@
 # Reveal.js
 <p style="color:GoldenRod; font-size:0.5em;">How I use Reveal.js and reveal-md to create presentations</p>
 
+
+---
+
+<!-- <div style="border: 1px solid #f00; "> -->
+
+<div>
+    <h2>What is Reveal?</h2>
+    <span style="font-size:67%">
+        <span> 
+            <ul>
+                <p style="color:GoldenRod;">reveal.js</p>
+                <li>Framework for HTML presentations</li>
+                <li>Nested slides</li>
+                <li>Markdown support</li>
+                <li>PDF export</li>
+                <li>JavaScript API</li>
+            </ul>
+        </span>
+        <span>
+            <ul>
+                <p style="color:GoldenRod;">reveal-md</p>
+                <li>Framework for MD presentations</li>
+                <li>reveal.js on steroids!</li>
+                <li>Same JavaScript API</li>
+                <li>Simpler Interface</li>
+                <li>Still supports HTML</li>
+            </ul>
+        </span>
+    </span>
+</div>
+
+
+
+---
+
+## 2-D Presentations
+
+<!-- <div style="border: 1px solid #f00; "> -->
+
+<em>
+    <span style="color:GoldenRod;">Move side to side and up & down</span>
+</em>
+
+----
+
+### Organize Vertical Slides
+<p style="color:GoldenRod; font-size:0.5em;">Pretty neat, huh?</p>
+
+<!-- <div style="border: 1px solid #f00; "> -->
+
+* Group topics or sections
+* Create executive overviews
+* Looks amazing on mobile
+
+
+----
+
+<h3>But what's the <span style="color:red;">point</span>?</h3>
+
+Nested slides are useful for adding additional detail underneath a high level horizontal slide.
+
+
+----
+
+<h2>Basement Level</h2>
+<p>That's it, time to go back up.</p>
+<br>
+<a href="#/2">
+    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+</a>
+---
+## So could I have 3-D presentations?
+
+<p style="color:GoldenRod; font-size:0.5em;">Best I can do is 2+1D slides</p>
+
+----
+
+<div style="position: relative; margin: 0 auto; width: 750px;">
+    <div style="position: relative; min-height: 200px; width: 750px; text-align: center; padding: 0px;">
+        <h3>Step through slides using fragments</h3>
+        <p style="color:GoldenRod; font-size:0.5em;">They're like PPT animations but somehow less annoying.</p>
+        <span class="fragment fade-out" data-fragment-index="0" style="font-size:67%">
+            <span>
+                <ul>
+                    <li>Learning initiatives</li>
+                    <li>Multitasking</li>
+                    <li>Planning meetings</li>
+                    <li>Dominion league</li>
+                </ul>
+            </span>
+            <span>
+                <ul>
+                    <li>Jira Issues</li>
+                    <li>Netflix marathon</li>
+                    <li>Failing pipelines</li>
+                    <li>TPS Reports</li>
+                </ul>
+            </span>
+        </span>
+    </div>
+    <div class="fragment fade-in" data-fragment-index="0">
+        <div style="width: 300px; min-height: 50px; position: absolute; bottom: 50px; left: 0px; text-align: left; padding: 10px; font-size:67%">
+            <ul>
+                <li>Learning initiatives</li>
+                <li>Planning meetings</li>
+            </ul>
+        </div>
+        <div style="transform: rotate(270deg); width: 200px; min-height: 50px; position: absolute; top: 275px; left: -150px; text-align: center; padding: 10px; font-size:50%">
+            Importance <br>
+            <svg width="350" height="20">
+                <defs>
+                    <marker id="arrow" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">
+                        <path d="M2,1 L2,10 L10,6 L2,2" style="fill:red;" />
+                    </marker>
+                </defs>
+                <path d="M30,10 L150,10" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);" />
+            </svg>
+        </div>
+        <div style="width: 750px; min-height: 50px; position: absolute; bottom: -150px; text-align: center; padding: 10px; font-size:50%;">
+            Urgency <br>
+            <svg width="350" height="20">
+                <defs>
+                    <marker id="arrow" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">
+                        <path d="M2,1 L2,10 L10,6 L2,2" style="fill:red;" />
+                    </marker>
+                </defs>
+                <path d="M30,10 L300,10" style="stroke:red; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);" />
+            </svg>
+        </div>
+        <div>
+            <div class="fragment fade-in" data-fragment-index="1" style="border: 1px solid #f00; width: 300px; height: 75px; position: absolute; bottom: 50px; left: 10px; text-align: left; padding: 10px; font-size:67%">
+            </div>
+            <div class="fragment fade-out" data-fragment-index="1" >
+                <div style="width: 300px; min-height: 50px; position: absolute; bottom: 50px; right: 0px; text-align: left; padding: 10px; font-size:67%">
+                    <ul>
+                        <li>Jira Issues</li>
+                        <li>Failing pipelines</li>
+                    </ul>
+                </div>
+                <div style="width: 300px; min-height: 50px; position: absolute; bottom: -75px; left: 0px; text-align: left; padding: 10px; font-size:67%">
+                    <ul>
+                        <li>Dominion league</li>
+                        <li>Netflix marathon</li>
+                    </ul>
+                </div>
+                <div style="width: 300px; min-height: 50px; position: absolute; bottom: -75px; right: 0px; text-align: left; padding: 10px; font-size:67%">
+                    <ul>
+                        <li>Multitasking</li>
+                        <li>TPS Reports</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fragment fade-in" data-fragment-index="1" style="width: 175px; min-height: 50px; position: absolute; bottom: -25px; right: 150px; text-align: center; padding: 10px; font-size:50%">
+                Hey, it's this meeting right now.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+---
+
+<div style="position: relative; margin: 0 auto; width: 950px; padding: 10px;">
+    <div style="position: relative; min-height: 500px; width: 950px; text-align: center; padding: 0px;">
+        <h2>The Possibilities are Endless</h2>
+        <div style="display: block; color:GoldenRod; font-size:0.5em; ">
+            <em>The full availability HTML5 means that you can design presentations any way you like</em>
+        </div>
+        <div style="width: 400px; min-height: 50px; relative; min-height: 200px; width: 500px; text-align: center; padding: 10px; font-size:67%">
+            <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .small { font: italic 12px sans-serif; fill: GoldenRod; }
+                </style>
+                <path fill="none" stroke="lightgrey" d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+                <circle r="2" fill="DarkRed">
+                    <animateMotion dur="10s" repeatCount="indefinite" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+                </circle>
+                <path id="MyPath" fill="none" d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+                <text class="small">
+                    <textPath href="#MyPath">
+                        I'm going to be creating presentations forever.
+                    </textPath>
+              </text>
+            </svg>
+        </div>
+    </div>
+        <div style="width: 400px; min-height: 200px; position: absolute; top: 250px; right: 50px; text-align: left; padding: 10px; font-size:67%">
+            <ul>
+                <li>Customize with CSS <em>themes</em></li>
+                <li>Transisiton styles</li>
+                <li>Custom Backgrounds</li>
+            </ul>
+    </div>
+</div>
+
+----
+<!-- .slide: data-background="#dddddd" --> 
+
+<h2>Slide Backgrounds</h2>
+<p>
+    Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+</p>
+<a href="#" class="navigate-down">
+    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+</a>
+
+----
+<!-- .slide: data-background="https://www.aithority.com/wp-content/uploads/2019/04/IBM-Watson-Health-Names-Nations-Top-Health-Systems.jpg" --> 
+
+<h2>Image Backgrounds</h2>
+<pre><code class="hljs html">.slide: data-background="./image.png"</code></pre>
+
+----
+<!-- .slide: data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" --> 
+
+<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+    <h2>Video Backgrounds</h2>
+    <pre><code class="hljs html" style="word-wrap: break-word;">.slide: data-background-video="./video.webm"</code></pre>
+</div>
+
+
+----
+<!-- .slide: data-background="http://i.giphy.com/90F8aUepslB84.gif" --> 
+
+<h2>... and GIFs!</h2>
+---
+
+## Deploy to GitHub
+
+* Post links intead of email attachements
+* No more <em style="color:GoldenRod;">MyPresnetation_FinalDraft_v2 (1).pptx</em>
+* Use GitHub Pages as a vehicle for your "static site"
+    * <a href="https://pages.github.ibm.com/bfbubnic/reveal_md/">pages.github.ibm.com/bfbubnic/reveal_md</a>
+---
+
+## How to Install
+
+<p style="color:GoldenRod; font-size:0.75em;">Source and instructions are <a href="https://github.com/webpro/reveal-md">here</a>.</p>
+
+<pre>
+    <code class="language-bash" data-trim>
+npm install -g reveal-md
+    </code>
+</pre>
+
+
+----
+
+### Create single MD file
+
+* <span style="color:GoldenRod; ">---</span> separates a horizontal slide
+* <span style="color:GoldenRod; ">----</span> separates a vertical slide
+
+----
+
+### Compile
+
+<p style="color:GoldenRod; font-size:0.75em;">Create a static html site from your markdown.</p>
+
+<pre>
+    <code class="language-bash" data-trim>
+reveal-md presentation.md --static docs
+    </code>
+</pre>
+
+----
+
+### Create single MD file
+
+<p style="color:GoldenRod; font-size:0.75em;">For simplicity I create an md for each slide and concat.</p> 
+
+<pre>
+    <code class="language-bash" data-trim>
+#!/bin/bash
+
+rm presentation.md
+cat slides/*.md > presentation.md
+reveal-md presentation.md --static docs
+open docs/index.html;
+    </code>
+</pre>
+
+
+
+---
+
+## Resources
+
+* reveal.js <a href="https://github.com/hakimel/reveal.js">source</a> and <a href="https://revealjs.com/#/">example</a>
+* reveal-md <a href="https://github.com/webpro/reveal-md">source</a>
+* This presentation's <a href="https://github.ibm.com/bfbubnic/reveal_md">source</a> code.
