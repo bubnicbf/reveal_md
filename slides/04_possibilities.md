@@ -35,11 +35,11 @@
 </div>
 
 ----
-<!-- .slide: data-background="#dddddd" --> 
+<!-- .slide: data-background="#dadfad" --> 
 
 <h2>Slide Backgrounds</h2>
 <p>
-    Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+    Set <code>data-background="#dadfad"</code> on a slide to change the background color. All CSS color formats are supported.
 </p>
 <a href="#" class="navigate-down">
     <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
